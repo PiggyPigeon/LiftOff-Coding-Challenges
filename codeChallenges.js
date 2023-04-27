@@ -17,3 +17,12 @@ console.log(minMax([10, 5, 8, 3, 12, 7]));
 
 
 //Code Challenge week 3
+
+function FirstReverse(str) {
+
+    return str.split('').reverse().join('');
+
+}
+
+// keep this function call here
+console.log(FirstReverse(readline()));
