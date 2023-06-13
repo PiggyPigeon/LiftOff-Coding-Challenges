@@ -135,3 +135,29 @@ let p3 = new Person("Lily", 24);
 console.log(p1.compareAge(p2));
 console.log(p2.compareAge(p1));
 console.log(p1.compareAge(p3));
+
+
+
+// Code Challenge Eight
+//  Create a function that takes two strings as arguments and returns the number of
+//  times the first string (the single character) is found in the second string.
+//     Examples
+// charCount("a", "edabit") ➞ 1
+//
+// charCount("c", "Chamber of secrets") ➞ 1
+//
+// charCount("b", "big fat bubble") ➞ 4
+
+function charCount(str1, str2) {
+    let total = 0;
+    for (let i = 0; i < str2.length; i++) {
+        if (str2[i].toLowerCase() == str1.toLowerCase()) {
+            total += 1;
+        }
+    }
+    return total;
+}
+
+console.log(charCount('a', 'edabit'))
+console.log(charCount('c', 'Chamber of secrets'))
+console.log(charCount('b', 'big fat bubble'))
