@@ -99,3 +99,39 @@ function detectWord(str) {
 }
 
 console.log(detectWord('UGHcGFHaHJVBJHGtGJHGJ'))
+
+
+// Code Challenge Seven
+// Create a method in the Person class which returns how another person's age compares.
+// Given the instances p1, p2 and p3, which will be initialised with
+// the attributes name and age, return a sentence in the following format:
+//
+// {other person name} is {older than / younger than / the same age as} me.
+
+//create the class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // create the function
+    compareAge(person2) {
+        if (this.age < person2) {
+            return `${person2.name} is older than me`;
+        } else if (this.age > person2.age) {
+            return `${person2.name} is younger than me.`;
+        } else {
+            return `${person2.name} is the same age as me.`;
+        }
+    }
+}
+
+// test it
+let p1 = new Person("Sam", 24);
+let p2 = new Person("Joel", 36);
+let p3 = new Person("Lily", 24);
+
+console.log(p1.compareAge(p2));
+console.log(p2.compareAge(p1));
+console.log(p1.compareAge(p3));
